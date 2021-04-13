@@ -66,3 +66,64 @@ a{
     text-decoration: none;
     color: #000000;
 }
+
+
+
+
+/* ----------- Styling for gamepage -------------*/
+
+.GameNav {
+  max-width: 1010px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+}
+
+.Gamelist {
+  margin-left: 45px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.SortText {
+  margin-left: auto;
+  padding-right: 10px;
+}
+
+.SortingType {
+  padding-right: 5px;
+}
+
+.Gamecontainer {
+  max-width: 1010px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+}
+
+.aGame {
+  display: flex;
+  flex-direction: row;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.Gametitle {
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+.GameDescription {
+  margin-left: auto;
+}
+
+.GameRating {
+  margin-left: 45px;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="logo.png" width="125px">
+                </div>
+                <nav>
+                <ul id="MenuItems">
+                    <li><a href="MainPage.html">Home</a></li>
+                    <li><a href="">Games</a></li>
+                    <li><a href="">Leaderboards</a></li>
+                    <li><a href="">About us</a></li>
+                </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class= "GameNav">
+            <div class= "Gamelist">
+                Games
+            </div>
+            <div class=" SortText">
+                Sort by:
+            </div>
+            <div class="SortingType">
+                <select name="Sorting" id="sorttype">
+                    <option value="Rating">Top Rated</option>
+                    <option value="Popularity">Most Popular</option>
+                </select>
+            </div>
+        </div>
+        <div class="Gamecontainer">
+            <div class = "aGame">
+                <div class = "GameLogo">
+                    <img src="gamelogo.png" width="125px">
+                </div>
+                <div class = "Gametitle">
+                    Game Title
+                </div>
+                <div class = "GameDescription">
+                    Describe <br> game <br> here
+                </div>
+                <div class= "GameRating">
+                    ★★★☆☆ <br>
+                    <button class= "PlayButton"> Play </button>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </main>
+    <script src="GameDisplay.js"></script>
+</body>
+</html>
