@@ -73,7 +73,10 @@ a{
 .footer1 img {
   width: 125px;
 }
-ul{
+.footer2 ul{
+  list-style-type: none;
+}
+.footer3 ul{
   list-style-type: none;
 }
 .footer h3{
@@ -81,7 +84,74 @@ ul{
   text-align: right;
 }
 
+/*------------ Slide show------------*/
+.rowGameSlider{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.mySlides {
+  display: none
+}
 
+.SlideContainer {
+  flex-basis: 70%;
+  position: relative;
+  margin: auto;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.LeaderboardsFrontPage{
+  flex-basis: 30%;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.text {
+  color: black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
 
 
 /* ----------- Styling for gamepage -------------*/
