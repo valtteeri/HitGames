@@ -1,6 +1,7 @@
 body{
   font-family: 'Poppins', sans-serif;
-  background-color: darkcyan;
+  background-image: url("pictures/backgroundimg.png");
+  background-size: cover;
 }
 .container{
   max-width: 1010px;
@@ -26,10 +27,11 @@ nav ul li{
   margin-right: 40px;
 }
 .main-header{
-  background: lightblue;
+  background: rgb(46, 46, 46);
   margin-left: -8px;
   margin-right: -8px;
   margin-top: -8px;
+  border-bottom: 1px solid black;
 }
 .row{
   display: flex;
@@ -55,14 +57,16 @@ nav ul li{
   background-color: whitesmoke;
 
   /* -------pos fixed et saa valkosen alas saakka ---------*/
-  position: fixed;
+ /* position: fixed;
     height: 780px;
     bottom: 20px;
     left: 0px;
     right: 0px;
     margin-bottom: 0px;
+    */
 }
+
 a{ 
     text-decoration: none;
-    color: #000000;
+    color: white;
 }
