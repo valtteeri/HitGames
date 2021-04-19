@@ -70,6 +70,9 @@ a{
     text-decoration: none;
     color: white;
 }
+.footer{
+  
+}
 .footer1 img {
   width: 125px;
 }
@@ -140,4 +143,5 @@ ul{
 
 .GameRating {
   margin-left: 45px;
+}
 }
