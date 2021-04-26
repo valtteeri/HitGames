@@ -1,8 +1,8 @@
 let testgames = [
     {
-        name: 'Placeholder name',
+        name: 'Catcher',
         image: 'placeholder.png',
-        description: 'game where you play with blocks',
+        description: 'You catch falling balls',
         rating: '4.3',
         popularity: '324'
     },
@@ -38,7 +38,7 @@ function generateGames() {
             </div>
             <div class= "GameRating">
                  ${game.rating} <i class="fas fa-star"></i> <br>
-                <button class= "PlayButton"> Play </button>
+                <a href="${game.name}.html" class= "PlayButton"> Play </a>
             </div>
         </div>
         <hr>`;

@@ -199,3 +199,15 @@ a{
 .GameRating {
   margin-left: 45px;
 }
+.PlayButton{
+  color: white;
+  padding: 3px 6px;
+  border-radius: 6px;
+  background-color: grey;
+}
+/* ----------- Styling for Catcher game -------------*/
+#Game-holder {
+  margin: auto;
+  width: 40%;
+  padding: 10px;
+}
