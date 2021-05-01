@@ -1,54 +1,56 @@
 const Catcher_size = 20;
 var GameScore = 0;
-var score;
 var notes = [];
 var catcher;
-var gameSpeed = 2;
+var gameSpeed = 1;
+
+
 function setup() {
 
   var canvas = createCanvas(400, 600);
   canvas.parent('Game-holder');
   catcher = createVector(width / 2, height - 50);
-
 }
 function scored() {
-    text("Score: " + GameScore +" ");
+    text(" " + GameScore +" ");
 }
 function draw() {
     background(46, 46, 46);
+    Loop();
+    let canvas = document.getElementById("defaultCanvas0")
+    canvas.addEventListener('click', (event) => {
+    GameRestart();
+});
+}
+function Loop() {
     handleCatcher();
     scored();
-
     if(frameCount % 15 === 0 && random() < 0.2){
-        notes.push(new Note(random(width), 0, random(10) + 10, 'white', random(1,3) * gameSpeed))
-
+        notes.push(new Note(random(width), 0, random(10) + 10, 'white', random(2,3) * gameSpeed))
     }
-    for(var i = notes.length - 1; i >= 0; i--){
+    for(i = 0; i < notes.length; i++){
         if (notes[i].onScreen) {
             notes[i].update();
             notes[i].draw();
 
             if (notes[i].caughtBy(catcher)){
-                score += Math.round(notes[i].vel.y / notes[i].size);
                 notes.splice(i, 1);
                 GameScore++;
                 gameSpeed += 0.2;
-                console.log("speedup");
             }
         } else {
             endGame();
         }
     }
     textSize(20);
-    text(GameScore, width / 2.15, 50);
+    text(GameScore, width / 2.15, 40);
 }
 function endGame(){
     noLoop();
     textSize(40);
-    stroke('rgba(0,255,0,0.25)');
-    strokeWeight(4);
     fill('White');
-    text("Game Over!", width / 4.1, height/ 2);
+    text("Game Over!", width / 4, height/4);
+    notes = [];
     
 }
 /*      The bat     */
@@ -63,9 +65,7 @@ function handleCatcher() {
     endShape(CLOSE);
 }
 
-
 /*      NOTES       */
-
 function Note(x, y, size, color, velocity){
     this.pos = createVector(x, y);
     this.vel = createVector(0, velocity)
@@ -87,3 +87,9 @@ Note.prototype.caughtBy = function(b){
             this.pos.y < catcher.y - Catcher_size / 2 ||
             this.pos.y > catcher.y + Catcher_size / 2);
 }
+function GameRestart() {     
+    loop();
+    GameScore = 0;
+    gameSpeed = 1;
+}
+
