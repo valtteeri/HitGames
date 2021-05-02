@@ -3,10 +3,9 @@ var GameScore = 0;
 var notes = [];
 var catcher;
 var gameSpeed = 1;
-var mode;
+var oScore = {};
 
 function setup() {
-  mode = 0;
   var canvas = createCanvas(400, 600);
   canvas.parent('Game-holder');
   catcher = createVector(width / 2, height - 50);
@@ -55,6 +54,7 @@ function endGame(){
     notes = [];
     textSize(20);
     text("Click to start!", width /2.8, height / 1.3)
+    localStorage.setItem('oScore',JSON.stringify(GameScore));
     
 }
 /*      The bat     */
