@@ -16,12 +16,14 @@ function scored() {
 }
 function draw() {
     background(46, 46, 46);
+    
     Loop();
     let canvas = document.getElementById("defaultCanvas0")
     canvas.addEventListener('click', (event) => {
     GameRestart();
-});
+    });
 }
+
 function Loop() {
     handleCatcher();
     scored();
@@ -49,8 +51,10 @@ function endGame(){
     noLoop();
     textSize(40);
     fill('White');
-    text("Game Over!", width / 4, height/4);
+    text("Game Over!", width / 4.1, height/4);
     notes = [];
+    textSize(20);
+    text("Click to start!", width /2.8, height / 1.3)
     
 }
 /*      The bat     */
