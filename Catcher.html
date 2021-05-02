@@ -62,8 +62,7 @@
 var oUser = {};
 // check for browser support of localStorage
 if(typeof(localStorage) == 'undefined') {
-    // Check failed, alert user
-    alert('Your browser does not support the localStorage method!');
+    alert('localStorage is not working');
 } else {
         // Checks if user is empty
         oUser = JSON.parse(localStorage.getItem('oUser'))||{};
