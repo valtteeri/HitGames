@@ -3,10 +3,10 @@ var GameScore = 0;
 var notes = [];
 var catcher;
 var gameSpeed = 1;
-
+var mode;
 
 function setup() {
-
+  mode = 0;
   var canvas = createCanvas(400, 600);
   canvas.parent('Game-holder');
   catcher = createVector(width / 2, height - 50);
@@ -16,12 +16,12 @@ function scored() {
 }
 function draw() {
     background(46, 46, 46);
-    
     Loop();
     let canvas = document.getElementById("defaultCanvas0")
     canvas.addEventListener('click', (event) => {
     GameRestart();
     });
+
 }
 
 function Loop() {
