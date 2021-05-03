@@ -3,7 +3,7 @@ let testgames = [
         name: 'Catcher',
         image: 'pictures/CatcherSmall.png',
         description: 'You catch falling balls',
-        rating: '4.3',
+        rating: '3.0',
         popularity: '324'
     },
     {
@@ -14,10 +14,10 @@ let testgames = [
         popularity: '528'
     },
     {
-        name: 'Placeholder name',
+        name: 'Minesweeper',
         image: 'placeholder.png',
-        description: 'game where you find bombs',
-        rating: '1.7',
+        description: 'Game where you find bombs',
+        rating: '3.1',
         popularity: '86'
     }
 ]
