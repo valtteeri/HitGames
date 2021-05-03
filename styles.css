@@ -246,3 +246,36 @@ a{
 .AboutUs {
   color: black;
 }
+
+
+/* Styling for minesweeper */
+.Minesweeperscoring {
+  display: flex;
+  flex-direction: row;
+  padding-left: 300px;
+  padding-right: 300px;
+  padding-top: 30px;
+}
+
+.Minesweeperbombs {
+  background-color: black;
+  color: red;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+.Minesweepertimer {
+  margin-left: auto;
+  background-color: black;
+  color: red;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+#gamecanvas {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: auto;
+  display: block;
+  background-color: black;
+}
