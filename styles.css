@@ -219,3 +219,26 @@ a{
   left: 250px;
   font-size: 30px;
 }
+
+/* ----------- Styling for leaderboard -------------*/
+
+.Leaderhead {
+  margin-left: 45px;
+  font-weight: bold;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+.LeaderTable {
+  padding-right: 75px;
+  padding-bottom: 15px;
+}
+
+.gif {
+  position: relative;
+  top: -319px;
+  left: 667px;
+  width: 274px;
+  height: auto;
+  
+}
