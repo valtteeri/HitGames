@@ -1,5 +1,5 @@
 // Canvas
-const cvs = document.getElementById("target");
+const cvs = document.getElementById("brick");
 const ctx = cvs.getContext("2d");
 
 //Variables
