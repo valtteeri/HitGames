@@ -28,7 +28,7 @@ function generateGames() {
         GameList.innerHTML += `
         <div class = "aGame">
             <div class = "GameLogo">
-            <a href="${game.name}.html"><img src="${game.image}" width="60px"> </a>
+            <a href="${game.name}.html"><img src="${game.image}" width="60px"></a>
             </div>
             <div class = "Gametitle">
             <a href="${game.name}.html"> ${game.name} </a>
