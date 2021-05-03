@@ -19,6 +19,13 @@ let testgames = [
         description: 'Game where you find bombs',
         rating: '3.1',
         popularity: '86'
+    },
+    {
+        name: 'BrickBreaker',
+        image: 'pictures/BrickBreakerSmall.png',
+        description: 'Break blocks with the ball',
+        rating: '3.3',
+        popularity: '80'
     }
 ]
 
