@@ -3,7 +3,7 @@ var GameScore = 0;
 var notes = [];
 var catcher;
 var gameSpeed = 1;
-var oScore = {};
+var CatcherScore = {};
 
 function setup() {
   var canvas = createCanvas(400, 600);
@@ -54,7 +54,7 @@ function endGame(){
     notes = [];
     textSize(20);
     text("Click to start!", width /2.8, height / 1.3)
-    localStorage.setItem('oScore',JSON.stringify(GameScore));
+    localStorage.setItem('CatcherScore',JSON.stringify(GameScore));
     
 }
 /*      The bat     */
