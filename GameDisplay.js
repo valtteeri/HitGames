@@ -1,7 +1,7 @@
 let testgames = [
     {
         name: 'Catcher',
-        image: 'placeholder.png',
+        image: 'CatcherSmall.png',
         description: 'You catch falling balls',
         rating: '4.3',
         popularity: '324'
@@ -28,7 +28,7 @@ function generateGames() {
         GameList.innerHTML += `
         <div class = "aGame">
             <div class = "GameLogo">
-                <img src="${game.image}" width="125px">
+                <img src="${game.image}">
             </div>
             <div class = "Gametitle">
                 ${game.name}
