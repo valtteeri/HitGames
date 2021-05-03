@@ -16,7 +16,7 @@ const timerminutes = document.getElementById("timerminutes")
 const timerseconds = document.getElementById("timerseconds")
 let totaltime = 0;
 
-var timer = setInterval(updatetimer, 1000);
+setInterval(updatetimer, 1000);
 
 class block {
     constructor (x, y, number, type) {
@@ -231,7 +231,6 @@ function lostgame() {
     context.fillText("You landed on a mine and lost the game!",80,200)
     context.fillText("Please press Enter ",150,230)
     context.fillText("to start a new game!",170,260)
-    clearInterval(timer);
     window.addEventListener('keypress', function(e){
         if (e.key === 'Enter') {
             restartgame();
@@ -252,7 +251,6 @@ function wongame() {
     context.fillText("Please press Enter ",150,290)
     context.fillText("to start a new game!",170,320)
     localStorage.setItem('minesweeperscore',JSON.stringify(score));
-    clearInterval(timer);
     window.addEventListener('keypress', function(e){
         if (e.key === 'Enter') {
             restartgame();
@@ -275,8 +273,6 @@ function restartgame() {
     generatenumbers();
 
     drawblocks();
-
-    timer = setInterval(updatetimer, 1000);
 
 }
 
