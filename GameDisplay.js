@@ -8,7 +8,7 @@ let testgames = [
     },
     {
         name: 'Worlds hardest (random) game',
-        image: 'placeholder.png',
+        image: 'pictures/whrgSmall.png',
         description: 'Play and find out how hard it is',
         rating: '2.4',
         popularity: '528'
