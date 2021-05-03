@@ -230,11 +230,14 @@ a {
   font-weight: bold;
   font-size: 30px;
   padding-bottom: 20px;
+  padding-top: 25px;
 }
 
 .LeaderTable {
   padding-right: 75px;
   padding-bottom: 15px;
+  border: outset;
+  width: 100%;
 }
 
 .gif {
