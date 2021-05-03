@@ -1,7 +1,7 @@
 let testgames = [
     {
         name: 'Catcher',
-        image: 'CatcherSmall.png',
+        image: 'pictures/CatcherSmall.png',
         description: 'You catch falling balls',
         rating: '4.3',
         popularity: '324'
