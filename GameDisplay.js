@@ -15,7 +15,7 @@ let testgames = [
     },
     {
         name: 'Minesweeper',
-        image: 'placeholder.png',
+        image: 'pictures/MineSweeperSmall.png',
         description: 'Game where you find bombs',
         rating: '3.1',
         popularity: '86'
