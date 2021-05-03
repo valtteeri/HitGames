@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/5c67a41eb6.js" crossorigin="anonymous"></script>
+        <title>Minesweeper</title>
+  </head>
+<body>
+  <header class="main-header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="pictures/logo.png" width="125px">
+            </div>
+            <nav>
+            <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="GamePage.html">Games</a></li>
+                <li><a href="LeaderPage.html">Leaderboards</a></li>
+                <li><a href="">About us</a></li>
+            </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<div class="container2">
+    <div class="Minesweeperscoring">
+        <div class = "Minesweeperbombs">
+            bombs = 32
+        </div>
+        <div class = "Minesweepertimer">
+            timer = <label id = timerminutes>00</label>:<label id = "timerseconds">00</label>
+        </div>
+    </div>
+    <div><canvas id="gamecanvas"></canvas></div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer1">
+                <img src="pictures/logo.png">
+                <p class="slogan">Nostalgia trip back to 90's</p>
+            </div>
+            <div class="footer2">
+                <h3> Useful Links</h3>
+                <ul>
+                    <li>Patch notes</li>
+                    <li>Jobs</li>
+                </ul>
+            </div>
+            <div class="footer3">
+                <h3 class = "footerTitle"> Follow us</h3>
+                <ul>
+                    <li>
+                        <a href=""><i class="fab fa-twitter-square fa-2x"></i></a>
+                        <a href=""><i class="fab fa-facebook-square fa-2x"></i></a>
+                        <a href=""><i class="fab fa-instagram fa-2x"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="Copyright">Copyright 2021 - Valtteri Hietala, Erik Myllylä,
+                                              Arttu Koskenniemi & Santeri Värttö</p>
+    </div>
+</div>
+<script src="minesweeper.js"></script>
+<script>
+    var User = {};
+    // check for browser support of localStorage
+    if(typeof(localStorage) == 'undefined') {
+        alert('localStorage is not working');
+    } else {
+            // Checks if user is empty
+            User = JSON.parse(localStorage.getItem('User'))||{};
+            // If he hasnt been before ask
+            if(!User.name) {
+                // ask for name
+                User.name = prompt("Enter Name: ");
+                // save user
+                localStorage.setItem('User',JSON.stringify(User));
+            } 
+        } 
+    
+    </script>
+</body>
+</html>

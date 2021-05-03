@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/5c67a41eb6.js" crossorigin="anonymous"></script>
+  </head>
+<body>
+  <header class="main-header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="pictures/logo.png" width="125px">
+            </div>
+            <nav>
+            <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="GamePage.html">Games</a></li>
+                <li><a href="LeaderPage.html">Leaderboards</a></li>
+                <li><a href="">About us</a></li>
+            </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<div class="lvlcng" id="lvlcngtarget">LEVEL  1</div>
+<div class="container2">
+    <div id="Game-holder"></div>
+    <canvas id="target"></canvas>
+        <script>
+            const canvas = document.getElementById("target");
+            const context = canvas.getContext("2d");
+
+            canvas.width = 1000;
+            canvas.height = 800;
+
+            var level = 5; //CHANGE DIFFICULTY HERE!
+           
+
+            class Player {
+                constructor(x, y, movementspeedx, movementspeedy) {
+                    this.x = x;
+                    this.y = y;
+                    this.movementspeedx = movementspeedx;
+                    this.movementspeedy = movementspeedy;
+                    this.width = 30;
+                    this.height = 30;
+
+                }
+
+
+                moveRight() {
+                    this.x = this.x + this.movementspeedy;
+                }
+
+                moveLeft() {
+                    this.x = this.x - this.movementspeedy;
+                }
+
+                update () {
+
+                    if(this.x >= 950) {
+                        level + 1;
+                    }
+                    if(this.x >= 950) {
+                        this.x = 50 
+                    }
+                    if(this.x <=50) {
+                        this.x = 50
+                    }
+                
+                    
+
+                }
+
+                draw () {
+                    context.beginPath();
+                    context.rect(this.x, this.y, this.width, this.width);
+                    context.fillStyle = "blue";
+                    context.fill();
+                    context.lineWidth = 5;
+                    context.strokeStyle = "black";
+                    context.stroke();
+
+                }
+            }
+
+            class FinishLine {
+                constructor(x, y, width, height) {
+                    this.x = x;
+                    this.y = y;
+                    this.width = width;
+                    this.height = height;
+
+                }
+
+
+                update () {
+
+                }
+
+                draw () {
+                    context.beginPath();
+                    context.rect(950, 0, 50, 800);
+                    context.fillStyle = "rgb(0, 255, 0)";
+                    context.fill();
+                    context.lineWidth = 1;
+                    context.strokeStyle = "rgb(0, 255, 0)";
+                    context.stroke();
+
+                }
+            }
+
+            class Ball{
+                constructor(startx, starty, speedx, speedy) {
+                    this.x = startx;
+                    this.y = starty;
+                    this.speedy = speedy;
+                    this.speedx = speedx;
+                    this.width = 30;
+                    this.height = 30;
+                }
+
+                update() {
+                    if((this.y >= canvas.height) || this.y <=0)  {
+                    this.speedy = -this.speedy;
+                }
+                    if((this.x >= canvas.width) || this.x <=0) {
+                    this.speedx = -this.speedx;
+                    }
+
+                this.y = this.y + this.speedy;
+                this.x = this.x + this.speedx;
+
+                if(((this.x + this.width) > player.x) &&
+                (this.x < (player.x + player.width)) &&
+                ((this.y + this.height) > player.y) &&
+                (this.y < (player.y + player.height))) {
+                    location.reload();
+
+                }
+
+                }
+
+                draw() {
+                    context.beginPath();
+                    context.arc(this.x, this.y, 15, 0, 2 * Math.PI);
+                    context.fillStyle = "red";
+                    context.fill();
+
+                }
+
+            }
+
+
+            const finishline = new FinishLine(600, 600, 10, 10)     //add ballz
+            const player = new Player(50, 400, 15, 15);
+            const ballStorage = [];
+            for(let i = 0; i < level; i++) {
+                let randomxdirection = 1;
+                if(Math.random() > 0.5) {
+                    randomxdirection = -1;
+                }
+                
+                
+                ballStorage.push(
+                new Ball(Math.random() * canvas.width,
+                         Math.random() * canvas.height,
+                         Math.random() * 4 * randomxdirection * 0.8,
+                         Math.random() * 4 * randomxdirection * 0.8));
+                    }
+
+            function updateScreen() {
+
+                context.clearRect(0, 0, canvas.width, canvas.height);
+
+                finishline.update();
+                finishline.draw();
+
+                for(let i = 0; i < ballStorage.length; i++) {
+                ballStorage[i].update();
+                ballStorage[i].draw();
+            }
+            player.update();
+            player.draw();
+
+            
+
+                                   
+                window.requestAnimationFrame(updateScreen);
+            }
+
+            window.requestAnimationFrame(updateScreen);
+
+
+            window.addEventListener("keydown", function(event){
+
+
+                switch(event.keyCode) {
+
+                    case 39:
+                        player.moveRight();
+                        break;
+                    case 37:
+                        player.moveLeft();
+                        break;
+                        
+                }
+            });
+
+
+        </script>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer1">
+                <img src="pictures/logo.png">
+                <p class="slogan">Nostalgia trip back to 90's</p>
+            </div>
+            <div class="footer2">
+                <h3> Useful Links</h3>
+                <ul>
+                    <li>Patch notes</li>
+                    <li>Jobs</li>
+                </ul>
+            </div>
+            <div class="footer3">
+                <h3 class = "footerTitle"> Follow us</h3>
+                <ul>
+                    <li>
+                        <a href=""><i class="fab fa-twitter-square fa-2x"></i></a>
+                        <a href=""><i class="fab fa-facebook-square fa-2x"></i></a>
+                        <a href=""><i class="fab fa-instagram fa-2x"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="Copyright">Copyright 2021 - Valtteri Hietala, Erik Myllylä,
+                                              Arttu Koskenniemi & Santeri Värttö</p>
+    </div>
+</div>
+</body>
+</html>
