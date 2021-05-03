@@ -59,19 +59,19 @@
     </div>
 </div>
 <script>
-var oUser = {};
+var User = {};
 // check for browser support of localStorage
 if(typeof(localStorage) == 'undefined') {
     alert('localStorage is not working');
 } else {
         // Checks if user is empty
-        oUser = JSON.parse(localStorage.getItem('oUser'))||{};
+        User = JSON.parse(localStorage.getItem('User'))||{};
         // If he hasnt been before ask
-        if(!oUser.name) {
+        if(!User.name) {
             // ask for name
-            oUser.name = prompt("Enter Name: ");
+            User.name = prompt("Enter name: ");
             // save user
-            localStorage.setItem('oUser',JSON.stringify(oUser));
+            localStorage.setItem('User',JSON.stringify(User));
         } 
     } 
 
