@@ -211,3 +211,11 @@ a{
   width: 40%;
   padding: 10px;
 }
+
+/* ----------- Worlds hardest game stuff -------------*/
+
+.lvlcng {
+  position: absolute;
+  left: 250px;
+  font-size: 30px;
+}
