@@ -25,6 +25,6 @@ app.use('/players', playersRouter);
 app.use('/ratings', ratingsRouter);
 app.use('/scores', scoresRouter);
 app.use(helmet());
-app.use(cors());
+app.use(cors({origin: 'http://http://46.101.104.25:3000'}));
 
 module.exports = app;
