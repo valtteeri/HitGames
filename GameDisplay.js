@@ -74,3 +74,40 @@ function generateGames() {
 
 generateGames();
 
+// const loadGames = () => {
+//     const xhttp = new XMLHttpRequest();
+
+//     xhttp.open("GET", "https://localhost:3000/games", false, "root","test");
+//     xhttp.send();
+
+//     const games = JSON.parse(xhttp.responseText);
+
+
+//     for (let game of games) {
+//         const x =`
+//             <div class = "aGame">
+//                 <div class = "GameLogo">
+//                 <a href="${games.game}.html"><img src="${games.game}.png" width="60px"></a>
+//                 </div>
+//                 <div class = "Gametitle">
+//                 <a href="${games.game}.html"> ${games.game} </a>
+//                 </div>
+//                 <div class = "GameDescription">
+//                    3
+//                 </div>
+//                 <div class= "GameRating">
+//                     3 <i class="fas fa-star"></i> <br>
+//                     <a href="${games.game}.html" class= "PlayButton"> Play </a>
+//                 </div>
+//             </div>
+//             <hr>
+//             `
+//         document.querySelector(".Gamecontainer").innerHTML = document.querySelector(".Gamecontainer").innerHTML + x;
+//     }
+// }
+
+// loadGames();
+
+// fetch('http://localhost:3000/games', {method: 'GET', mode: 'cors'})
+//     .then(response => response.json())
+//     .then(data => console.log(data))
